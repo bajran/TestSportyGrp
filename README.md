@@ -22,11 +22,6 @@ As permitted, I used the following tools to accelerate development:
   - Generated responsive CSS using mobile-first best practices
   - Guided implementation of in-memory caching using TypeScript generics
 
-## 💡 Notes
-
-- The app uses `React.lazy()` to defer non-critical component loading.
-- Caching is handled using a generic `fetchWithMemoryCache<T>()` utility that supports TTL and avoids redundant network calls.
-
 ## 🚀 How to Run This Project
 
 ```bash
