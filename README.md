@@ -30,12 +30,15 @@ As permitted, I used the following tools to accelerate development:
 ## 🚀 How to Run This Project
 
 ```bash
-# 1. Install dependencies
+# 1. Go to sporttest subdirectory
+cd sporttest
+
+# 2. Install dependencies
 npm install
 
-# 2. Start the development server
+# 3. Start the development server
 npm run dev
 
-#3. App will run at
+# 4. App will run at
  http://localhost:5173/
 ```
