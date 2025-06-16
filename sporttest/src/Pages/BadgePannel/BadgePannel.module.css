@@ -1,0 +1,53 @@
+/* ----------  MOBILE BASE  ---------- */
+.panel {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr)); /* 1–3 cols */
+  gap: 1rem;
+}
+
+.badgeCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.75rem;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  background: #fafafa;
+  transition: box-shadow 0.2s ease;
+}
+
+.badgeCard:hover {
+  box-shadow: 0 4px 12px rgba(0, 82, 165, 0.12);
+}
+
+.badgeImage {
+  width: 56px;
+  height: 56px;
+  margin-bottom: 0.4rem;
+}
+.seasonLabel {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #333;
+}
+
+/* ----------  ≥ 480 px  ---------- */
+@media (min-width: 480px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+}
+
+/* ----------  ≥ 768 px  ---------- */
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}

@@ -1,54 +1,41 @@
-# React + TypeScript + Vite
+# 🏆 Sports League
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a **single-page React application** that fetches and displays sports leagues using TheSportsDB API. This project is setup using React | Vite | Typescript.
 
-Currently, two official plugins are available:
+## ✅ Objective Coverage
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+| Requirement                     | Implemented? | Description                                                                                          |
+| ------------------------------- | ------------ | ---------------------------------------------------------------------------------------------------- |
+| Component-based architecture    | ✅           | Each unit (Card, Modal, Loader, NoData, IF, SearchBar, MultiSelectDropdown) is isolated and reusable |
+| State management                | ✅           | Managed with React `useState`, `useEffect` — no Redux used due to scope                              |
+| API integration                 | ✅           | `/all_leagues` and `/search_all_seasons` endpoints with caching                                      |
+| Mobile-first, responsive layout | ✅           | CSS modules with `flex`, `grid` and `@media (min-width)`                                             |
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🧠 Tools and Assistance Used
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+As permitted, I used the following tools to accelerate development:
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- **ChatGPT**:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+  - Generated responsive CSS using mobile-first best practices
+  - Guided implementation of in-memory caching using TypeScript generics
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+## 💡 Notes
+
+- The app uses `React.lazy()` to defer non-critical component loading.
+- Caching is handled using a generic `fetchWithMemoryCache<T>()` utility that supports TTL and avoids redundant network calls.
+
+## 🚀 How to Run This Project
+
+```bash
+# 1. Install dependencies
+npm install
+
+# 2. Start the development server
+npm run dev
+
+#3. App will run at
+ http://localhost:5173/
 ```

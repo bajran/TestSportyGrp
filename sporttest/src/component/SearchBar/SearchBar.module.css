@@ -1,0 +1,12 @@
+.container {
+  width: 180px;
+}
+
+.input {
+  width: -webkit-fill-available;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  /* height: 40px; */
+}

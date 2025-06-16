@@ -1,0 +1,44 @@
+.container {
+  position: relative;
+  width: 245px;
+}
+.dropdownToggle {
+  color: #0d1a3a;
+  cursor: pointer;
+  width: -webkit-fill-available;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.dropdownMenu {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  padding: 0.5rem;
+  top: 110%;
+  height: 120px;
+  overflow: auto;
+}
+.option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 0.25rem;
+  font-size: 14px;
+  color: #0d1a3a;
+  cursor: pointer;
+}
+
+.placeholder {
+  opacity: 0.6;
+}
